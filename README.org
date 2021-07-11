@@ -15,3 +15,15 @@ nohup go run particle.go -density 80 -iterations 7200 &
 nohup go run particle.go -density 90 -iterations 7200 &
 nohup go run particle.go -density 95 -iterations 7200 &
 
+
+added QmfBq5trrUpaQP4Hje4vwU6aWDbz9DbujhVsJMXTKJ7Pb1 particle_vids/1920x1080-at-10.00.mp4
+added QmUG6sGQSm2VsPDmjfsyBKeqkQRNE4R6fkBksLsk8Pp8Py particle_vids/1920x1080-at-20.00.mp4
+added QmcbHHgLm2JX7CWsADd6ftjDTYWV3xzbfcXrGmKom9rPGG particle_vids/1920x1080-at-30.00.mp4
+added QmYKSNEXqo1uCD3MctqrDzcykPwEYvppR5MdghX9ND6scd particle_vids/1920x1080-at-40.00.mp4
+added QmPzLvrLsGZAzh4SCjMeKZhc8FnWNvGAVugYNHPPPQ6WXC particle_vids/1920x1080-at-50.00.mp4
+added QmWUANuPStfUSWR4ipphurajLLjnzk9E2GAiFRnQLBEhAG particle_vids/1920x1080-at-60.00.mp4
+added QmVaYD22MWNoKQHSseYKP6EW89nhDmCftMd3ZfA5qX9RR4 particle_vids/1920x1080-at-70.00.mp4
+added Qmdd2JiZJwMrvwSvtrpNb9X7spjJtGXopv4ru5kv6STTcR particle_vids/1920x1080-at-80.00.mp4
+added QmVdTX4AuQASMDEwJE1jQ7L21LeMPqvFp4WodooJpVGk68 particle_vids/1920x1080-at-90.00.mp4
+added QmQzpsZQ38vd5i7KQbt1MmHCApng1Yk2jg85eb9kkCDA4C particle_vids/1920x1080-at-95.00.mp4
+added QmSyLKvLHzBitWvoT2r7UNmTEgVKNgRwribMTu7LvuwVuy particle_vids
