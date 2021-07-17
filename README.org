@@ -4,19 +4,60 @@ ffmpeg -framerate 30 -pattern_type glob -i "out/*.png" -c:v libx264 -r 30 -pix_f
 
 go run particles.go
 
+
+
+
+
 nohup go run particle.go -density 10 -iterations 7200 &
+nohup go run particle.go -density 15 -iterations 7200 &
 nohup go run particle.go -density 20 -iterations 7200 &
+nohup go run particle.go -density 25 -iterations 7200 &
 nohup go run particle.go -density 30 -iterations 7200 &
+nohup go run particle.go -density 35 -iterations 7200 &
 nohup go run particle.go -density 40 -iterations 7200 &
+nohup go run particle.go -density 42 -iterations 7200 &
+nohup go run particle.go -density 45 -iterations 7200 &
+nohup go run particle.go -density 47 -iterations 7200 &
 nohup go run particle.go -density 50 -iterations 7200 &
+nohup go run particle.go -density 52 -iterations 7200 &
+nohup go run particle.go -density 55 -iterations 7200 &
+nohup go run particle.go -density 57 -iterations 7200 &
 nohup go run particle.go -density 60 -iterations 7200 &
+nohup go run particle.go -density 65 -iterations 7200 &
 nohup go run particle.go -density 70 -iterations 7200 &
+nohup go run particle.go -density 75 -iterations 7200 &
 nohup go run particle.go -density 80 -iterations 7200 &
+nohup go run particle.go -density 85 -iterations 7200 &
 nohup go run particle.go -density 90 -iterations 7200 &
 nohup go run particle.go -density 95 -iterations 7200 &
 
 
-nohup ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-10.00-*.jpg" -vcodec libx265 -crf 28 1920x1080-at-10.00.mp4 &
+
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-10.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-10.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-15.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-15.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-20.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-20.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-25.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-25.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-30.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-30.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-35.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-35.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-40.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-40.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-42.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-42.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-45.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-45.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-47.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-47.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-50.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-50.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-52.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-52.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-55.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-55.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-57.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-57.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-60.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-60.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-65.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-65.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-70.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-70.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-75.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-75.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-80.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-80.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-85.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-85.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-90.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-90.00.mp4
+ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-95.00-*.jpg" -c:v libx264 -crf 28 1920x1080-at-95.00.mp4
+
+
+
 
 added QmfBq5trrUpaQP4Hje4vwU6aWDbz9DbujhVsJMXTKJ7Pb1 particle_vids/1920x1080-at-10.00.mp4
 added QmUG6sGQSm2VsPDmjfsyBKeqkQRNE4R6fkBksLsk8Pp8Py particle_vids/1920x1080-at-20.00.mp4
