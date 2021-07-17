@@ -36,7 +36,7 @@ var (
 	Iterations    = 16384
 	OutDir        = "out"
 
-	jpegOptions = jpeg.Options{Quality: 100}
+	jpegOptions = jpeg.Options{Quality: 65}
 )
 
 func (p *Particle) Move() bool {
