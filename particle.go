@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"flag"
+	"fmt"
 	"image"
 	"image/color"
 	"image/jpeg"
@@ -12,9 +12,7 @@ import (
 	"os"
 )
 
-const (
-
-)
+const ()
 
 type (
 	Particle struct {
@@ -32,13 +30,13 @@ var (
 	stepCount  = 0
 
 	ParticleCount = 1920 * 768
-	ImageWidth   = 1920
-	ImageHeight  = 1080
-	Density = 50.0
-	Iterations = 16384
-	OutDir = "out"
+	ImageWidth    = 1920
+	ImageHeight   = 1080
+	Density       = 50.0
+	Iterations    = 16384
+	OutDir        = "out"
 
-	jpegOptions = jpeg.Options{Quality: 65}
+	jpegOptions = jpeg.Options{Quality: 100}
 )
 
 func (p *Particle) Move() {
@@ -47,10 +45,14 @@ func (p *Particle) Move() {
 
 	bgColor := color.RGBA{255, 255, 255, 255}
 
+	//
 	if p.Type == 0 && stepCount%2 == 0 {
 		c := canvas.At((x+1)%ImageWidth, y)
 		if c == bgColor {
 			p.X += 1
+		}
+		if x >= ImageWidth {
+			p.X = 0
 		}
 	}
 	if p.Type == 1 && stepCount%2 == 1 {
@@ -58,13 +60,12 @@ func (p *Particle) Move() {
 		if c == bgColor {
 			p.Y += 1
 		}
+
+		if y >= ImageHeight {
+			p.Y = 0
+		}
 	}
-	if y+1 >= ImageHeight {
-		p.Y = 0
-	}
-	if x+1 >= ImageWidth {
-		p.X = 0
-	}
+
 }
 
 func main() {
@@ -84,7 +85,7 @@ func main() {
 	Iterations = *i
 	OutDir = *o
 
-	ParticleCount = int(Density / 100.0 * float64(ImageWidth * ImageHeight))
+	ParticleCount = int(Density / 100.0 * float64(ImageWidth*ImageHeight))
 
 	r := image.Rect(0, 0, ImageWidth, ImageHeight)
 	canvas = image.NewRGBA(r)
