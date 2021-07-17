@@ -39,17 +39,19 @@ var (
 	jpegOptions = jpeg.Options{Quality: 100}
 )
 
-func (p *Particle) Move() {
+func (p *Particle) Move() bool {
 	x := int(math.Round(p.X))
 	y := int(math.Round(p.Y))
 
 	bgColor := color.RGBA{255, 255, 255, 255}
 
+	moved := false
 	//
 	if p.Type == 0 && stepCount%2 == 0 {
 		c := canvas.At((x+1)%ImageWidth, y)
 		if c == bgColor {
 			p.X += 1
+			moved = true
 		}
 		if x >= ImageWidth {
 			p.X = 0
@@ -59,12 +61,14 @@ func (p *Particle) Move() {
 		c := canvas.At(x, (y+1)%ImageHeight)
 		if c == bgColor {
 			p.Y += 1
+			moved = true
 		}
 
 		if y >= ImageHeight {
 			p.Y = 0
 		}
 	}
+	return moved
 
 }
 
@@ -105,7 +109,10 @@ func main() {
 
 	for i := 0; i < Iterations; i += 1 {
 		log.Printf("%d finished", i)
-		moveParticles()
+		moveCount := moveParticles()
+		if moveCount < 1 && i > 0 {
+			break
+		}
 		renderBackground()
 		renderParticles()
 		saveImage()
@@ -114,10 +121,15 @@ func main() {
 
 }
 
-func moveParticles() {
+func moveParticles() int {
+	moveCount := 0
 	for i := 0; i < len(particles); i += 1 {
-		particles[i].Move()
+		moved := particles[i].Move()
+		if moved {
+			moveCount += 1
+		}
 	}
+	return moveCount
 }
 
 func renderParticles() {
