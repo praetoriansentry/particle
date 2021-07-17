@@ -16,6 +16,8 @@ nohup go run particle.go -density 90 -iterations 7200 &
 nohup go run particle.go -density 95 -iterations 7200 &
 
 
+nohup ffmpeg -framerate 240 -pattern_type glob -i "out/1920x1080-at-10.00-*.jpg" -vcodec libx265 -crf 28 1920x1080-at-10.00.mp4 &
+
 added QmfBq5trrUpaQP4Hje4vwU6aWDbz9DbujhVsJMXTKJ7Pb1 particle_vids/1920x1080-at-10.00.mp4
 added QmUG6sGQSm2VsPDmjfsyBKeqkQRNE4R6fkBksLsk8Pp8Py particle_vids/1920x1080-at-20.00.mp4
 added QmcbHHgLm2JX7CWsADd6ftjDTYWV3xzbfcXrGmKom9rPGG particle_vids/1920x1080-at-30.00.mp4

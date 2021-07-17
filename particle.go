@@ -48,13 +48,13 @@ func (p *Particle) Move() {
 	bgColor := color.RGBA{255, 255, 255, 255}
 
 	if p.Type == 0 && stepCount%2 == 0 {
-		c := canvas.At(x+1, y)
+		c := canvas.At((x+1)%ImageWidth, y)
 		if c == bgColor {
 			p.X += 1
 		}
 	}
 	if p.Type == 1 && stepCount%2 == 1 {
-		c := canvas.At(x, y+1)
+		c := canvas.At(x, (y+1)%ImageHeight)
 		if c == bgColor {
 			p.Y += 1
 		}
